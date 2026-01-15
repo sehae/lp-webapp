@@ -1,6 +1,7 @@
 import Navbar from "@/components/navbar";
 import "./globals.css";
 import { Playfair_Display, Libre_Baskerville, Source_Sans_3 } from "next/font/google";
+import CookiePopup from "@/components/cookie";
 
 const libreBaskerville = Libre_Baskerville({
   variable: "--font-libre-baskerville",
@@ -22,7 +23,10 @@ export default function RootLayout({ children }) {
       <body>
         <Navbar />
         {children}
+        <CookiePopup />
       </body>
+        
+
     </html>
   );
 }

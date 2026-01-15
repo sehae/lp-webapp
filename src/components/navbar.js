@@ -12,22 +12,13 @@ export default function Navbar() {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
 
-  // Define the links with their corresponding section IDs
+  // Define the links with their names only
   const navLinks = [
-    { name: "Home", id: "home" },
-    { name: "Listings", id: "listings" },
-    { name: "Let's Move", id: "lets-move" },
-    { name: "About Us", id: "#" }
+    { name: "Home" },
+    { name: "Listings" },
+    { name: "Let's Move" },
+    { name: "About Us" }
   ];
-
-  // Smooth scroll function
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-    closeMenu();
-  };
 
   return (
     <nav className={styles.nav}>
@@ -44,8 +35,8 @@ export default function Navbar() {
 
       {/* Desktop Links */}
       <ul className={styles.links}>
-        {navLinks.map((link) => (
-          <li key={link.id} onClick={() => scrollToSection(link.id)}>
+        {navLinks.map((link, index) => (
+          <li key={index}>
             {link.name}
           </li>
         ))}
@@ -65,8 +56,8 @@ export default function Navbar() {
           <FontAwesomeIcon icon={faXmark} />
         </button>
         <ul>
-          {navLinks.map((link) => (
-            <li key={link.id} onClick={() => scrollToSection(link.id)}>
+          {navLinks.map((link, index) => (
+            <li key={index}>
               {link.name}
             </li>
           ))}

@@ -15,11 +15,9 @@ export default function Navbar() {
   // Define the links with their corresponding section IDs
   const navLinks = [
     { name: "Home", id: "home" },
-    { name: "About", id: "about" },
     { name: "Listings", id: "listings" },
-    { name: "Photos", id: "photos" },
-    { name: "Services", id: "services" },
-    { name: "Contact", id: "contact" }
+    { name: "Let's Move", id: "lets-move" },
+    { name: "About Us", id: "#" }
   ];
 
   // Smooth scroll function
